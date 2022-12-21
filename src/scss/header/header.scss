@@ -1,0 +1,103 @@
+.container-main-info {
+  .header {
+    background-color: $color_sub-main;
+    &__button-hiden {
+      display: none;
+    }
+
+    &__button-lable {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 16px 18px 16px;
+    }
+
+    &__servise {
+      position: relative;
+      &::before {
+        content: '';
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background: #eaeaea;
+        position: absolute;
+        left: -20px;
+        top: 4px;
+      }
+    }
+  }
+}
+.logo {
+  flex-grow: 1;
+  &__box {
+    max-width: 97px;
+    max-height: 51px;
+  }
+}
+// Header
+.button-burger-open {
+  background: url('./../img/burger.svg');
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  &__button-call {
+    background: url('./../img/call.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &__button-profile {
+    background: url('./../img/profile.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &__button-chat {
+    background: url('./../img/chat.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &__button-status {
+    background: url('./../img/checkstatus.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &__button-repair {
+    background: url('./../img/repair.svg');
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// Aside
+.burger__button {
+  &-close {
+    background: url('./../img/burgerX.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &-search {
+    background: url('./../img/search.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &-call {
+    background: url('./../img/call.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &-chat {
+    background: url('./../img/chat.svg');
+    width: 40px;
+    height: 40px;
+  }
+  &-profile {
+    background: url('./../img/profile.svg');
+    width: 40px;
+    height: 40px;
+  }
+}

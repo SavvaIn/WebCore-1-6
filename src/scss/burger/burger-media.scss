@@ -1,0 +1,14 @@
+@media (min-width: $breakpoint_desktop) {
+  .burger {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+
+    &__header .header__button:nth-child(1) {
+      display: none;
+    }
+  }
+  .burger-blur {
+    opacity: 0.05;
+  }
+}
