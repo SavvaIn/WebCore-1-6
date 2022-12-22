@@ -24,6 +24,7 @@
   }
 
   &__nav-list {
+    scrollbar-width: none;
     display: flex;
     overflow: scroll;
     padding: 0;
@@ -64,7 +65,6 @@
     }
     &__p {
       display: block;
-      width: 288px;
       height: 90px;
       overflow: hidden;
     }
@@ -82,12 +82,11 @@
       font-size: 16px;
     }
     &__image-box {
-      width: 100%;
-      max-width: 600px;
+      width: 100vh;
     }
 
     &__p-up {
-      min-height: 236px;
+      height: auto;
     }
   }
 }

@@ -1,3 +1,5 @@
+import Swiper, { Navigation, Pagination } from 'swiper'
+Swiper.use([Navigation, Pagination])
 let swiper
 
 const width = window.matchMedia('(max-width: 767.5px)')

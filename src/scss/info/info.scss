@@ -1,7 +1,7 @@
 .note {
   padding: 16px 16px 0 16px;
   &__text-box {
-    width: 286px;
+    max-width: 600px;
     height: 138px;
   }
   &__text {

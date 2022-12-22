@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebCore 1.6</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <div class="container">
@@ -75,7 +70,7 @@
           <ul class="burger__contacts-links">
             <li>
               <button
-                class="burger__button-call"
+                class="burger__button-call header__button focus-chat"
                 type="button"
                 aria-lable="call"
               >
@@ -83,7 +78,7 @@
             </li>
             <li>
               <button
-                class="burger__button-chat"
+                class="burger__button-chat header__button focus-call"
                 type="button"
                 aria-lable="chat"
               >
@@ -122,37 +117,49 @@
             <button class="modal__button-close button-close-feedback"> </button>
           </div>
           <div class="modal__title">Обратная связь</div>
-          <ul class="modal__list">
-            <li class="modal__item">
-              <input class="modal__input" type="text" placeholder="Имя" />
-            </li>
-            <li class="modal__item">
-              <input class="modal__input" type="text" placeholder="Телефон" />
-            </li>
-            <li class="modal__item">
+          <div class="modal__form">
+            <form id="444" method="get" action="#">
               <input
                 class="modal__input"
                 type="text"
+                placeholder="Имя"
+                name="name"
+                id="tmp"
+                required
+                autofocus
+                pattern="^[a-zA-Z]+$"
+              />
+              <input
+                class="modal__input"
+                type="tel"
+                name="phone"
+                placeholder="Телефон"
+                required
+                pattern="[0-9]{5,11}"
+              />
+              <input
+                class="modal__input"
+                type="email"
+                name="email"
+                required
                 placeholder="Электронная почта"
               />
-            </li>
-            <li class="modal__item">
-              <textarea
-                class="modal__input"
-                name=""
-                id=""
-                cols="37"
-                rows="8"
+              <input
+                class="modal__input text-message"
+                type="text"
+                name="message"
                 placeholder="Сообщение"
-              ></textarea>
-            </li>
-          </ul>
+                required
+              />
+            </form>
+          </div>
+
           <p class="modal__text">
             Нажимая “отправить”, вы даете согласие на
             <span>обработку персональных данных</span> и соглашаетесь с нашей
             <span>политикой конфиденциальности</span>
           </p>
-          <button class="btn-order" type="button">
+          <button form="444" class="btn-order">
             <span class="btn-order__text">отправить</span>
           </button>
           <div class="modal__zone-close zone-close-feedback"></div>
@@ -162,13 +169,26 @@
             <button class="modal__button-close buttom-close-call"> </button>
           </div>
           <div class="modal__title">Заказать звонок</div>
-          <input class="modal__input" type="text" placeholder="Телефон" />
+
+          <form id="555" method="get" action="#">
+            <input
+              class="modal__input"
+              type="tel"
+              name="phone"
+              id="tmp2"
+              placeholder="Телефон"
+              required
+              autofocus
+              pattern="[0-9]{5,11}"
+            />
+          </form>
           <p class="modal__text">
             Нажимая “отправить”, вы даете согласие на
             <span>обработку персональных данных</span> и соглашаетесь с нашей
             <span>политикой конфиденциальности</span>
           </p>
-          <button class="btn-order" type="button">
+
+          <button form="555" class="btn-order">
             <span class="btn-order__text">отправить</span>
           </button>
           <div class="modal__zone-close zone-close-call"></div>
@@ -191,7 +211,7 @@
                   <img src="img/logo.svg" alt="logo" />
                 </button>
               </li>
-              <li class="header__call header__button-hiden">
+              <li class="header__call header__button-hiden focus-chat">
                 <button
                   type="button"
                   class="header__button header__button-call"
@@ -202,7 +222,7 @@
               <li class="header__chat header__button-hiden">
                 <button
                   type="button"
-                  class="header__button header__button-chat"
+                  class="header__button header__button-chat focus-call"
                   aria-ladel="open chat"
                 >
                 </button>
@@ -286,7 +306,7 @@
                   </span>
                 </div>
                 <div class="info__expand-button">
-                  <button class="expand-button__expand-show">
+                  <button class="expand-button__expand-show show-info">
                     <span class="expand-button__text expand-open"
                       >Читать далее</span
                     >
@@ -406,7 +426,7 @@
               ></div>
             </div>
 
-            <button type="button" class="btn brand-list__btn">
+            <button type="button" class="btn brand-list__btn show-brands">
               <span class="btn__text btn__text-brand-list">Показать все</span>
             </button>
           </div>
@@ -478,7 +498,7 @@
               ></div>
             </div>
 
-            <button type="button" class="btn repair-list__btn">
+            <button type="button" class="btn repair-list__btn show-repair">
               <span class="btn__text btn__text-repair-list">Показать все</span>
             </button>
           </div>
@@ -638,6 +658,5 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

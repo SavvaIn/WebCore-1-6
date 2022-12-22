@@ -75,3 +75,19 @@ zoneCloseCall.addEventListener('click', () => {
   burger.classList.remove('burger-blur')
   body.classList.remove('body-overflow-hiden')
 })
+
+const focusCall = document.querySelectorAll('.focus-call')
+
+for (let el of focusCall) {
+  el.addEventListener('click', () => {
+    document.getElementById('tmp').focus()
+  })
+}
+
+const focusChat = document.querySelectorAll('.focus-chat')
+
+for (let els of focusChat) {
+  els.addEventListener('click', () => {
+    document.getElementById('tmp2').focus()
+  })
+}

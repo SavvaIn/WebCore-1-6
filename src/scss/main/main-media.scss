@@ -12,13 +12,13 @@
 
     .info {
       gap: 48px;
-
+      flex-wrap: nowrap;
       &__text {
         padding: 0 0 0 24px;
       }
 
       &__p {
-        width: 310px;
+        width: 90%;
         height: 150px;
       }
 
@@ -28,11 +28,16 @@
       }
 
       &__image-box {
-        width: 360px;
-        height: 260px;
+        width: 380px;
+        height: 250px;
       }
       &__image {
         border-radius: 6px;
+        width: 380px;
+        height: 250px;
+      }
+      &__p-up {
+        height: auto;
       }
     }
   }
@@ -67,6 +72,9 @@
       &__image-box {
         width: 531px;
         height: 383px;
+      }
+      &__p-up {
+        height: auto;
       }
     }
   }
